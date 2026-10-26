@@ -1,0 +1,15 @@
+venv/
+
+__pycache__/
+*.pyc
+
+acciones_espanolas_dataset.csv
+
+modelo_compra_3pct.pkl
+
+ranking_hoy.csv
+ranking_oportunidades.csv
+compras_recomendadas.csv
+importancia_variables.csv
+
+docs/*.bak
