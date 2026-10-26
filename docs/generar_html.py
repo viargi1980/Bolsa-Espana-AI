@@ -59,7 +59,7 @@ ranking["Señal"] = ranking[
     "Probabilidad de subir >3% mañana"
 ].str.replace(" %", "").astype(float).apply(
     lambda x:
-    "🟢 Tener muy en cuenta" if x >= 70 else
+    "🟢 Alta Probabilidad" if x >= 70 else
     "🟡 Vigilar" if x >= 60 else
     "⚪ Esperar"
 )
