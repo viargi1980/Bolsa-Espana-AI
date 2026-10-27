@@ -24,4 +24,4 @@ for script in scripts:
         sys.exit(1)
 
 print()
-print("✅ PIPELINE FINALIZADOS")
+print("✅ PIPELINE FIN")
