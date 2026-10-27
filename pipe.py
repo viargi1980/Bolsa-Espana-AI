@@ -20,9 +20,8 @@ for script in scripts:
     )
 
     if resultado.returncode != 0:
-
         print(f"ERROR en {script}")
         sys.exit(1)
 
 print()
-print("✅ PIPELINE FINALIZADO")
+print("✅ PIPELINE FINALIZADOS")
