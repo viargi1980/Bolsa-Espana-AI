@@ -33,6 +33,11 @@ jobs:
         run: |
           python pipe.py
 
+      - name: Verificar docs
+        run: |
+          pwd
+          ls -la docs
+
       - name: Configurar Git
         run: |
           git config user.name "github-actions[bot]"
