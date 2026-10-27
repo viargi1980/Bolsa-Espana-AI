@@ -16,6 +16,9 @@ jobs:
 
       - name: Descargar repositorio
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v5
@@ -30,6 +33,13 @@ jobs:
         run: |
           python pipe.py
 
+      - name: Verificar cambios
+        run: |
+          echo "===== GIT STATUS ====="
+          git status
+          echo "===== GIT DIFF ====="
+          git diff --stat
+
       - name: Configurar Git
         run: |
           git config user.name "github-actions[bot]"
@@ -38,6 +48,10 @@ jobs:
       - name: Guardar cambios generados
         run: |
           git add docs/index.html
-          git status
-          git commit -m "Actualizar página web automática" || echo "Sin cambios"
-          git push
+          
+          if git diff --cached --quiet; then
+            echo "Sin cambios en index.html"
+          else
+            git commit -m "Actualizar página web automática"
+            git push origin main
+          fi
