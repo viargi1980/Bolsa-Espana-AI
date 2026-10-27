@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+from datetime import datetime
 
 # ==========================================
 # CARGAR RANKING
@@ -26,7 +27,7 @@ ranking = ranking.rename(
 )
 
 # ==========================================
-# TABLA HTML
+# RANKING VISUAL
 # ==========================================
 
 ranking.insert(
@@ -41,9 +42,9 @@ ranking.insert(
     ]
 )
 
-
-
-# Datos para cabecera
+# ==========================================
+# DATOS CABECERA
+# ==========================================
 
 top1 = ranking.iloc[0]["Ticker"]
 top2 = ranking.iloc[1]["Ticker"]
@@ -51,8 +52,12 @@ top3 = ranking.iloc[2]["Ticker"]
 
 num_acciones = len(ranking)
 
+fecha_actualizacion = datetime.now().strftime(
+    "%d/%m/%Y %H:%M"
+)
+
 # ==========================================
-# TABLA HTML
+# SEÑALES
 # ==========================================
 
 ranking["Señal"] = ranking[
@@ -71,7 +76,7 @@ tabla = ranking.to_html(
 )
 
 # ==========================================
-# HTML COMPLETO
+# HTML
 # ==========================================
 
 html = f"""
@@ -214,6 +219,9 @@ tr:hover {{
 Inteligencia Artificial para detectar oportunidades bursátiles
 </p>
 
+<div class="badge">
+📅 Actualizado: {fecha_actualizacion}
+</div>
 
 </div>
 
@@ -287,7 +295,7 @@ suba más de un 3% en la próxima sesión bursátil.
 <div class="footer">
 
 🤖 Generado automáticamente por Bolsa España AI<br>
-📅 Actualizado diariamente con datos de mercado
+📅 Última actualización: {fecha_actualizacion}
 
 </div>
 
@@ -296,11 +304,8 @@ suba más de un 3% en la próxima sesión bursátil.
 </html>
 """
 
-from pathlib import Path
-import webbrowser
-
 # ==========================================
-# CREAR DOCS
+# CREAR CARPETA DOCS
 # ==========================================
 
 Path("docs").mkdir(
@@ -308,7 +313,7 @@ Path("docs").mkdir(
 )
 
 # ==========================================
-# GUARDAR
+# GUARDAR HTML
 # ==========================================
 
 ruta_html = Path("docs/index.html")
@@ -318,13 +323,9 @@ with open(
     "w",
     encoding="utf-8"
 ) as f:
-
     f.write(html)
 
 print()
 print("✅ WEB GENERADA CORRECTAMENTE")
 print()
 print(f"📄 Archivo: {ruta_html.resolve()}")
-
-
-
