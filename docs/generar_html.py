@@ -33,9 +33,9 @@ ranking.insert(
     0,
     "Ranking",
     [
-        "🥇" if i == 0 else
-        "🥈" if i == 1 else
-        "🥉" if i == 2 else
+        "🥇 Oro" if i == 0 else
+        "🥈 Plata" if i == 1 else
+        "🥉 Bronce" if i == 2 else
         f"#{i+1}"
         for i in range(len(ranking))
     ]
