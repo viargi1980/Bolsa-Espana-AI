@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Bolsa España AI</title>
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+    color:white;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+.header {
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1 {
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.header p {
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+.badge {
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    border-radius:30px;
+    background:#22c55e;
+    font-weight:bold;
+}
+
+.stats {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.stat {
+    background:#1e293b;
+    padding:25px;
+    width:250px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.stat h2 {
+    font-size:32px;
+    color:#60a5fa;
+}
+
+.card {
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    margin-bottom:40px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.card h2 {
+    margin-bottom:20px;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th {
+    background:#2563eb;
+    color:white;
+    padding:14px;
+}
+
+td {
+    padding:12px;
+    border-bottom:1px solid #334155;
+}
+
+tr:nth-child(even) {
+    background:#182436;
+}
+
+tr:hover {
+    background:#22314a;
+}
+
+.footer {
+    text-align:center;
+    color:#94a3b8;
+    padding:40px;
+}
+
+.logo {
+    font-size:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">📈</div>
+
+<h1>Bolsa España AI</h1>
+
+<p>
+Inteligencia Artificial para detectar oportunidades bursátiles
+</p>
+
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>166k+</h2>
+<p>Registros históricos</p>
+</div>
+
+<div class="stat">
+<h2>46</h2>
+<p>Acciones españolas</p>
+</div>
+
+<div class="stat">
+<h2>3%</h2>
+<p>Objetivo de subida</p>
+</div>
+
+<div class="stat">
+<h2>IA</h2>
+<p>Predicción diaria</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🔥 Top oportunidades de hoy</h2>
+
+<p style="font-size:20px; line-height:2;">
+🥇 SOL.MC<br>
+🥈 GRE.MC<br>
+🥉 SLR.MC
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Objetivo del modelo</h2>
+
+<p>
+La probabilidad indica la posibilidad estimada de que una acción
+suba más de un 3% en la próxima sesión bursátil.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 Ranking de oportunidades</h2>
+
+<table border="1" class="dataframe tabla">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ranking</th>
+      <th>Ticker</th>
+      <th>Probabilidad de subir >3%</th>
+      <th>Señal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🥇🥇🥇</td>
+      <td>SOL.MC</td>
+      <td>72.61 %</td>
+      <td>🟢 Alta Probabilidad</td>
+    </tr>
+    <tr>
+      <td>🥈🥈</td>
+      <td>GRE.MC</td>
+      <td>71.97 %</td>
+      <td>🟢 Alta Probabilidad</td>
+    </tr>
+    <tr>
+      <td>🥉</td>
+      <td>SLR.MC</td>
+      <td>71.66 %</td>
+      <td>🟢 Alta Probabilidad</td>
+    </tr>
+    <tr>
+      <td>#4</td>
+      <td>PRS.MC</td>
+      <td>58.61 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#5</td>
+      <td>FER.MC</td>
+      <td>51.43 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#6</td>
+      <td>MTS.MC</td>
+      <td>49.78 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#7</td>
+      <td>ENO.MC</td>
+      <td>49.19 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#8</td>
+      <td>OHLA.MC</td>
+      <td>49.17 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#9</td>
+      <td>FACE.MC</td>
+      <td>48.99 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#10</td>
+      <td>AMP.MC</td>
+      <td>47.36 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#11</td>
+      <td>REP.MC</td>
+      <td>45.04 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#12</td>
+      <td>ORY.MC</td>
+      <td>42.28 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#13</td>
+      <td>TEF.MC</td>
+      <td>40.96 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#14</td>
+      <td>ACS.MC</td>
+      <td>40.67 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#15</td>
+      <td>IAG.MC</td>
+      <td>40.09 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#16</td>
+      <td>DIA.MC</td>
+      <td>39.55 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#17</td>
+      <td>MRL.MC</td>
+      <td>38.98 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#18</td>
+      <td>BKT.MC</td>
+      <td>33.97 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#19</td>
+      <td>CAF.MC</td>
+      <td>33.9 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#20</td>
+      <td>NEA.MC</td>
+      <td>31.34 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#21</td>
+      <td>ANA.MC</td>
+      <td>31.3 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#22</td>
+      <td>SAN.MC</td>
+      <td>30.03 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#23</td>
+      <td>CABK.MC</td>
+      <td>28.22 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#24</td>
+      <td>FAE.MC</td>
+      <td>28.11 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#25</td>
+      <td>ALM.MC</td>
+      <td>26.08 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#26</td>
+      <td>GRF.MC</td>
+      <td>25.8 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#27</td>
+      <td>SAB.MC</td>
+      <td>21.5 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#28</td>
+      <td>MEL.MC</td>
+      <td>20.92 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#29</td>
+      <td>GAM.MC</td>
+      <td>19.78 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#30</td>
+      <td>BBVA.MC</td>
+      <td>18.0 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#31</td>
+      <td>VID.MC</td>
+      <td>17.83 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#32</td>
+      <td>HOME.MC</td>
+      <td>16.57 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#33</td>
+      <td>UNI.MC</td>
+      <td>16.37 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#34</td>
+      <td>SNG.MC</td>
+      <td>14.3 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#35</td>
+      <td>TLGO.MC</td>
+      <td>13.62 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#36</td>
+      <td>ITX.MC</td>
+      <td>10.19 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#37</td>
+      <td>AENA.MC</td>
+      <td>9.66 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#38</td>
+      <td>VIS.MC</td>
+      <td>7.49 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#39</td>
+      <td>LOG.MC</td>
+      <td>6.84 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#40</td>
+      <td>ELE.MC</td>
+      <td>6.51 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#41</td>
+      <td>NTGY.MC</td>
+      <td>5.23 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#42</td>
+      <td>ENG.MC</td>
+      <td>5.15 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#43</td>
+      <td>IBE.MC</td>
+      <td>4.53 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#44</td>
+      <td>RED.MC</td>
+      <td>4.51 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#45</td>
+      <td>COL.MC</td>
+      <td>4.0 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+    <tr>
+      <td>#46</td>
+      <td>EBRO.MC</td>
+      <td>3.73 %</td>
+      <td>⚪ Esperar</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>📊 Interpretación</h2>
+
+<ul style="line-height:2;padding-left:25px;">
+<li>🟢 > 70% → Oportunidad muy fuerte</li>
+<li>🟡 60% - 70% → Señal interesante</li>
+<li>⚪ < 60% → Vigilancia</li>
+</ul>
+
+</div>
+
+<div class="footer">
+
+🤖 Generado automáticamente por Bolsa España AI<br>
+📅 Actualizado diariamente con datos de mercado
+
+</div>
+
+</body>
+
+</html>
