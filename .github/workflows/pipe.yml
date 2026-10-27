@@ -3,7 +3,7 @@ name: Ejecutar Pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * 1-5"
+    - cron: "0 5 * * 1-6"
 
 jobs:
   ejecutar:
@@ -38,5 +38,6 @@ jobs:
       - name: Guardar cambios generados
         run: |
           git add docs/index.html
+          git status
           git commit -m "Actualizar página web automática" || echo "Sin cambios"
           git push
