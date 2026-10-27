@@ -21,7 +21,7 @@ ranking["probabilidad"] = (
 ranking = ranking.rename(
     columns={
         "ticker": "Ticker",
-        "probabilidad": "Probabilidad de subir >3% mañana"
+        "probabilidad": "Probabilidad de subir >3%"
     }
 )
 
@@ -56,7 +56,7 @@ num_acciones = len(ranking)
 # ==========================================
 
 ranking["Señal"] = ranking[
-    "Probabilidad de subir >3% mañana"
+    "Probabilidad de subir >3%"
 ].str.replace(" %", "").astype(float).apply(
     lambda x:
     "🟢 Alta Probabilidad" if x >= 70 else
