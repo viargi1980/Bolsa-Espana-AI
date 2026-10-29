@@ -4,9 +4,10 @@ name: Ejecutar Pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: "3 4 * * 1-6"
-    - cron: "33 4 * * 1-6"
-     - cron: "4 5 * * 1-6"
+      - cron: "3 4 * * 1-6"
+      - cron: "33 4 * * 1-6"
+      - cron: "4 5 * * 1-6"
+>>>>>>> d12b192 (Actualizar frecuencia de ejecución)
 
 jobs:
   ejecutar:
