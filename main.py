@@ -41,7 +41,7 @@ tickers = [
     "ROVI.MC","ALM.MC","FAE.MC","GRF.MC","PHM.MC",
 
     # Renovables
-    "GRE.MC","SOL.MC","ADX.MC",
+    "GRE.MC","ADX.MC",
 
     # Logística y transporte
     "LOG.MC",
