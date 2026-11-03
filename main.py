@@ -6,85 +6,50 @@ import yfinance as yf
 # ==========================================
 
 tickers = [
-
-    # Bancos
-    "SAN.MC",
-    "BBVA.MC",
-    "CABK.MC",
-    "SAB.MC",
-    "BKT.MC",
-    "UNI.MC",
-
     # Energía
-    "IBE.MC",
-    "REP.MC",
-    "ENG.MC",
-    "NTGY.MC",
-    "RED.MC",
-    "SLR.MC",
-    "SOL.MC",
+    "IBE.MC","REP.MC","ENG.MC","NTGY.MC","RED.MC","SLR.MC","ELE.MC",
 
     # Telecom
     "TEF.MC",
 
     # Construcción e infraestructuras
-    "ACS.MC",
-    "FER.MC",
-    "OHLA.MC",
+    "ACS.MC","FER.MC","OHLA.MC","TRE.MC",
 
     # Industria
-    "ANA.MC",
-    "MTS.MC",
-    "CAF.MC",
-    "TLGO.MC",
+    "ANA.MC","MTS.MC","CAF.MC","TLGO.MC",
+    "CIE.MC","ENO.MC","ECR.MC",
 
     # Tecnología
-    
-    "AMP.MC",
+    "AMP.MC","IDR.MC",
 
     # Consumo
-    "ITX.MC",
-    "EBRO.MC",
-    "VIS.MC",
+    "ITX.MC","EBRO.MC","VIS.MC","DOM.MC","DIA.MC",
 
     # Turismo
-    "AENA.MC",
-    "MEL.MC",
-    "IAG.MC",
+    "AENA.MC","MEL.MC","IAG.MC",
+
+    # Bancos
+    "SAN.MC","BBVA.MC","CABK.MC","SAB.MC","UNI.MC",
+
+    # Seguros
+    "MAP.MC",
 
     # Inmobiliario
-    "MRL.MC",
-    "COL.MC",
-    "HOME.MC",
+    "COL.MC","MRL.MC","HOME.MC",
 
-    # Medios
-    "PRS.MC",
-
-    # Alimentación
-    "EBRO.MC",
-
-    # Farmacia / Biotech
-    "GRF.MC",
-    "ALM.MC",
-    "FAE.MC",
-    "ORY.MC",
+    # Salud
+    "ROVI.MC","ALM.MC","FAE.MC","GRF.MC","PHM.MC",
 
     # Renovables
-    "GRE.MC",
+    "GRE.MC","SOL.MC","ADX.MC",
 
-    # Continuo
-    "DIA.MC",
+    # Logística y transporte
     "LOG.MC",
-    "VID.MC",
-    "GAM.MC",
-    "ENO.MC",
-    "ELE.MC",
 
-    # Growth
-    "FACE.MC",
-    "NEA.MC",
-    "SNG.MC"
+    # Small Caps interesantes
+    "GAM.MC","AZK.MC"
 ]
+
 # ==========================================
 # IBEX
 # ==========================================
